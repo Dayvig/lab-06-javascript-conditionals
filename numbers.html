@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var num = prompt("Enter a number");
+      var digits = 1;
+      var newnum = num;
+      //finds the highest digit
+      while (newnum > 10){
+        digits++;
+        newnum /= 10;
+      }
+      //finds and prints the digits
+      var extra = "";
+      for (var i=digits;i>0;i--){
+        newnum = Math.floor(num/Math.pow(10, i-1)) % 10;
+        switch (i%10){
+          case 1:
+            extra = "st";
+            break;
+          case 2:
+            extra = "nd";
+            break;
+          case 3:
+            extra = "rd";
+            break;
+          default:
+            extra = "th";
+        }
+        document.write("The "+i+extra+" digit is "+newnum);
+        document.write("<br>");
+      }
+    </script>
+  </body>
+</html>
