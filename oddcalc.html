@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var input = prompt("Give me a number");
+      var num1 = parseInt(input, 10);
+      input = prompt("Give me a number");
+      var num2 = parseInt(input, 10);
+      input = prompt("What do you want to do with these?");
+      input = input.toLowerCase();
+      if (input == "multiply"){
+        document.write(num1*num2);
+      }
+      else if (input == "divide"){
+        if (num2 == 0){
+          document.write("What is you doing?");
+        }
+        else {
+          document.write(num1/num2);
+        }
+      }
+      else if (input == "add"){
+        document.write(num1+num2);
+      }
+      else if (input == "subtract"){
+        document.write(num1-num2);
+      }
+      else if (input == "remainder"){
+        document.write(num1%num2);
+      }
+      else {
+          document.write("Incorrect input");
+      }
+    </script>
+  </body>
+</html>

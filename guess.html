@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var secret = 42;
+      var input = prompt("Guess a number from 0 to 100");
+      var num = parseInt(input, 10);
+      if (num == secret){
+        document.write("Wow you got it wow");
+      }
+      else if (secret-num < 3 && secret-num > -3){
+        document.write("Close!");
+      }
+      else {
+        document.write("Try again lol <br>");
+      }
+      document.write("The number was "+secret+"!");
+    </script>
+  </body>
+</html>
